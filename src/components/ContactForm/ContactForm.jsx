@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact, getContacts } from '../../redux/contactsSlice';
 import { Form, Label, Input, Button } from './ContactForm.styled';
 
-export const ContactForm = ({ onSubmit, title }) => {
+export const ContactForm = () => {
   const contacts = useSelector(getContacts);
   const dispatch = useDispatch();
 
@@ -51,7 +51,6 @@ export const ContactForm = ({ onSubmit, title }) => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <h2>{title}</h2>
       <Label htmlFor={nameId}>
         Name
         <Input
